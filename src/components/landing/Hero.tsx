@@ -2,9 +2,10 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { ChevronDown } from 'lucide-react';
 import { useRef } from 'react';
+import { FlipText } from './FlipText';
 
 const Hero = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const containerRef = useRef<HTMLElement>(null);
   
   const { scrollYProgress } = useScroll({
@@ -24,6 +25,23 @@ const Hero = () => {
       aboutSection.scrollIntoView({ behavior: 'smooth' });
     }
   };
+
+  // Animated headline phrases
+  const flipPhrases = language === 'es'
+    ? [
+        'Culinarias Privadas',
+        'Gastronómicas Exclusivas',
+        'De Alta Cocina',
+      ]
+    : [
+        'Culinary Experiences',
+        'Dining Experiences',
+        'Chef Services',
+      ];
+
+  // Static headline parts
+  const staticStart = language === 'es' ? 'Experiencias' : 'Private';
+  const staticEnd = language === 'es' ? 'Creadas con Precisión' : 'Crafted with Precision';
 
   return (
     <section
@@ -83,14 +101,22 @@ const Hero = () => {
             Park City, Utah
           </motion.p>
 
-          {/* Main Headline */}
+          {/* Main Headline with FlipText */}
           <motion.h1
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.4 }}
             className="text-display-lg md:text-display-xl font-light leading-[0.95] mb-8"
+            style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5ch', alignItems: 'center' }}
           >
-            {t('hero.headline')}
+            <span style={{ whiteSpace: 'pre' }}>{staticStart} </span>
+            <FlipText
+              phrases={flipPhrases}
+              interval={5000}
+              className="hero-flip-text"
+              ariaLabel={flipPhrases.join(', ')}
+            />
+            <span style={{ whiteSpace: 'pre' }}> {staticEnd}</span>
           </motion.h1>
 
           {/* Subheadline */}
