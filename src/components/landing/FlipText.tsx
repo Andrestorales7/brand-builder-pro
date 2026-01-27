@@ -7,7 +7,7 @@ interface FlipTextProps {
   ariaLabel?: string;
 }
 
-export const FlipText = ({ phrases, interval = 5000, className = '', ariaLabel }: FlipTextProps) => {
+export const FlipText = ({ phrases, interval = 2000, className = '', ariaLabel }: FlipTextProps) => {
   const [index, setIndex] = useState(0);
   const [paused, setPaused] = useState(false);
   const [reduceMotion, setReduceMotion] = useState(false);
