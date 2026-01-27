@@ -27,17 +27,11 @@ const Hero = () => {
   };
 
   // Animated headline phrases
-  const flipPhrases = language === 'es'
-    ? [
-        'Culinarias Privadas',
-        'Gastronómicas Exclusivas',
-        'De Alta Cocina',
-      ]
-    : [
-        'Culinary Experiences',
-        'Dining Experiences',
-        'Chef Services',
-      ];
+  const flipPhrases = [
+    'Private Culinary Experiences',
+    'Dining Experiences',
+    'Chef Services',
+  ];
 
   // Static headline parts
   const staticStart = language === 'es' ? 'Experiencias' : 'Private';
@@ -112,7 +106,7 @@ const Hero = () => {
             <span style={{ whiteSpace: 'pre' }}>{staticStart} </span>
             <FlipText
               phrases={flipPhrases}
-              interval={5000}
+              interval={2000}
               className="hero-flip-text"
               ariaLabel={flipPhrases.join(', ')}
             />
