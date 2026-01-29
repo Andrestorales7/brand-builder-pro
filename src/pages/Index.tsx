@@ -7,6 +7,7 @@ import Experience from '@/components/landing/Experience';
 import Skills from '@/components/landing/Skills';
 import Contact from '@/components/landing/Contact';
 import Footer from '@/components/landing/Footer';
+import { Skiper52 } from '@/components/landing/Skiper52';
 
 const Index = () => {
   return (
@@ -17,6 +18,10 @@ const Index = () => {
           <Hero />
           <About />
           <Services />
+          {/* Gallery Section - Skiper52 */}
+          <section id="gallery" className="w-full bg-[#f5f4f3]">
+            <Skiper52 />
+          </section>
           <Experience />
           <Skills />
           <Contact />
