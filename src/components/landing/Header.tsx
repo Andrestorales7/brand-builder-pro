@@ -35,11 +35,16 @@ const Header = () => {
           {/* Logo / Name */}
           <motion.a
             href="#"
-            className="text-lg md:text-xl font-light tracking-wider uppercase"
+            className="flex items-center text-lg md:text-xl font-light tracking-wider uppercase"
             whileHover={{ opacity: 0.7 }}
             transition={{ duration: 0.2 }}
           >
-            DSA
+            <img
+              src="/images/logo.jpeg"
+              alt="Chef David Logo"
+              className="h-16 w-auto object-contain mr-2 rounded-2xl shadow"
+              style={{ maxHeight: '4rem' }}
+            />
           </motion.a>
 
           {/* Desktop Navigation */}
