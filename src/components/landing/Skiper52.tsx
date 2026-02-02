@@ -20,7 +20,8 @@ const Skiper52 = () => {
     { src: "/images/13.jpeg", alt: "Chef David - Galería 10", code: "#10" },
   ];
   return (
-    <div className="flex h-full w-full items-center justify-center overflow-hidden bg-[#f5f4f3]">
+    <div className="flex flex-col items-center h-full w-full justify-center overflow-hidden bg-[#f5f4f3]">
+      {/* Logo eliminado de la galería */}
       <HoverExpand_001 className="" images={images} />
     </div>
   );
