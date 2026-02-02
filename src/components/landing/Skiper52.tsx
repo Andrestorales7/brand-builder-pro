@@ -8,16 +8,16 @@ import { cn } from "@/lib/utils";
 
 const Skiper52 = () => {
   const images = [
-    { src: "/images/pic2.jpeg", alt: "Chef David - Galería 1", code: "#1" },
-    { src: "/images/pic3.jpeg", alt: "Chef David - Galería 2", code: "#2" },
-    { src: "/images/pic4.jpeg", alt: "Chef David - Galería 3", code: "#3" },
-    { src: "/images/pic5.jpeg", alt: "Chef David - Galería 4", code: "#4" },
-    { src: "/images/pic.jpeg", alt: "Chef David - Galería 5", code: "#5" },
-    { src: "/images/pic6.jpeg", alt: "Chef David - Galería 6", code: "#6" },
-    { src: "/images/pic7.jpeg", alt: "Chef David - Galería 7", code: "#7" },
-    { src: "/images/pic8.jpeg", alt: "Chef David - Galería 8", code: "#8" },
-    { src: "/images/pic9.jpeg", alt: "Chef David - Galería 9", code: "#9" },
-    { src: "/images/pic10.jpeg", alt: "Chef David - Galería 10", code: "#10" },
+    { src: "/images/2.jpeg", alt: "Chef David - Galería 1", code: "#1" },
+    { src: "/images/3.jpeg", alt: "Chef David - Galería 2", code: "#2" },
+    { src: "/images/4.jpeg", alt: "Chef David - Galería 3", code: "#3" },
+    { src: "/images/5.jpeg", alt: "Chef David - Galería 4", code: "#4" },
+    { src: "/images/6.jpeg", alt: "Chef David - Galería 5", code: "#5" },
+    { src: "/images/11.jpeg", alt: "Chef David - Galería 6", code: "#6" },
+    { src: "/images/12.jpeg", alt: "Chef David - Galería 7", code: "#7" },
+    { src: "/images/9.jpeg", alt: "Chef David - Galería 8", code: "#8" },
+    { src: "/images/10.jpeg", alt: "Chef David - Galería 9", code: "#9" },
+    { src: "/images/13.jpeg", alt: "Chef David - Galería 10", code: "#10" },
   ];
   return (
     <div className="flex h-full w-full items-center justify-center overflow-hidden bg-[#f5f4f3]">
