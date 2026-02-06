@@ -47,7 +47,7 @@ const Header = () => {
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo / Name */}
           <motion.a
-            href="#"
+            href="/"
             className="flex items-center text-lg md:text-xl font-light tracking-wider uppercase"
             whileHover={{ opacity: 0.7 }}
             transition={{ duration: 0.2 }}
