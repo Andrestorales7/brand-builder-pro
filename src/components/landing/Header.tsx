@@ -2,23 +2,36 @@ import { motion } from 'framer-motion';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const Header = () => {
   const { language, setLanguage, t } = useLanguage();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const navigate = useNavigate();
 
-  const navItems = [
-    { key: 'nav.about', href: '#about' },
-    { key: 'nav.services', href: '#services' },
-    { key: 'nav.experience', href: '#experience' },
-    { key: 'nav.skills', href: '#skills' },
-    { key: 'nav.contact', href: '#contact' },
+  interface NavItem {
+    key: string;
+    href: string;
+    type: 'scroll' | 'navigate';
+  }
+
+  const navItems: NavItem[] = [
+    { key: 'nav.inicio', href: '/', type: 'navigate' },
+    { key: 'nav.about', href: '#about', type: 'scroll' },
+    
+    { key: 'nav.services', href: '#services', type: 'scroll' },
+    { key: 'nav.skills', href: '/SkillsPage', type: 'navigate' },
+    { key: 'nav.contact', href: '#contact', type: 'scroll' },
   ];
 
-  const scrollToSection = (href: string) => {
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+  const handleNavigation = (href: string, type: 'scroll' | 'navigate') => {
+    if (type === 'navigate') {
+      navigate(href);
+    } else {
+      const element = document.querySelector(href);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
     }
     setIsMenuOpen(false);
   };
@@ -52,7 +65,7 @@ const Header = () => {
             {navItems.map((item, index) => (
               <motion.button
                 key={item.key}
-                onClick={() => scrollToSection(item.href)}
+                onClick={() => handleNavigation(item.href, item.type)}
                 className="editorial-link text-sm tracking-wide uppercase text-muted-foreground hover:text-foreground transition-colors"
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -114,7 +127,7 @@ const Header = () => {
             {navItems.map((item) => (
               <button
                 key={item.key}
-                onClick={() => scrollToSection(item.href)}
+                onClick={() => handleNavigation(item.href, item.type)}
                 className="block w-full text-left text-lg tracking-wide text-muted-foreground hover:text-foreground transition-colors py-2"
               >
                 {t(item.key)}
