@@ -101,6 +101,18 @@ const translations: Record<Language, Record<string, string>> = {
     // Footer
     'footer.copyright': '© 2025 David Sanchez Amarilla. All rights reserved.',
     'footer.tagline': 'Private Culinary Excellence',
+
+    // HomeChefIntro
+    'homechefintro.title': 'What is HomeChef Weekly?',
+    'homechefintro.description': 'HomeChef Weekly offers the service of a professional private chef, bringing you an exclusive and healthy culinary experience directly to your home.',
+    'homechefintro.check1': 'Chef in your home',
+    'homechefintro.check2': 'Meals ready for the week',
+    'homechefintro.check3': 'Order, cleanliness, labels',
+    'homechefintro.chefAlt': 'Chef cooking',
+    'homechefintro.mealPrepAlt': 'Meal prep containers',
+    'homechefintro.fridgeAlt': 'Organized containers in fridge',
+    'homechefintro.bottomText': 'Enjoy balanced, exclusive, and ready-to-heat meals served by a professional chef who adapts to your taste and lifestyle.',
+    'homechefintro.logoAlt': 'HomeChef Logo',
   },
   es: {
     // Navigation
@@ -194,6 +206,18 @@ const translations: Record<Language, Record<string, string>> = {
     // Footer
     'footer.copyright': '© 2025 David Sanchez Amarilla. Todos los derechos reservados.',
     'footer.tagline': 'Excelencia Culinaria Privada',
+
+    // HomeChefIntro
+    'homechefintro.title': '¿Qué es HomeChef Weekly?',
+    'homechefintro.description': 'HomeChef Weekly ofrece el servicio de un chef privado profesional, llevándote una experiencia culinaria exclusiva y saludable directamente a tu hogar.',
+    'homechefintro.check1': 'Chef en tu hogar',
+    'homechefintro.check2': 'Comidas listas para la semana',
+    'homechefintro.check3': 'Orden, limpieza, etiquetas',
+    'homechefintro.chefAlt': 'Chef cocinando',
+    'homechefintro.mealPrepAlt': 'Recipientes de meal prep',
+    'homechefintro.fridgeAlt': 'Recipientes organizados en refrigerador',
+    'homechefintro.bottomText': 'Disfruta de comidas balanceadas, exclusivas y listas para calentar servidas por un chef profesional que se adapta a tu gusto y ritmo de vida.',
+    'homechefintro.logoAlt': 'Logo HomeChef',
   },
 };
 

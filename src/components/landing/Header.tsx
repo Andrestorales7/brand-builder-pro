@@ -18,7 +18,6 @@ const Header = () => {
   const navItems: NavItem[] = [
     { key: 'nav.inicio', href: '/', type: 'navigate' },
     { key: 'nav.about', href: '#about', type: 'scroll' },
-    
     { key: 'nav.services', href: '#services', type: 'scroll' },
     { key: 'nav.skills', href: '/SkillsPage', type: 'navigate' },
     { key: 'nav.contact', href: '#contact', type: 'scroll' },
@@ -47,10 +46,12 @@ const Header = () => {
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo / Name */}
           <motion.a
-            href="/"
+            href="#"
             className="flex items-center text-lg md:text-xl font-light tracking-wider uppercase"
             whileHover={{ opacity: 0.7 }}
             transition={{ duration: 0.2 }}
+            aria-label={t('nav.inicio')}
+            style={{ background: 'none' }}
           >
             <img
               src="/images/logo.jpeg"
@@ -58,7 +59,7 @@ const Header = () => {
               className="h-16 w-auto object-contain mr-2 rounded-2xl shadow"
               style={{ maxHeight: '4rem' }}
             />
-          </motion.a>
+          </motion.button>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">

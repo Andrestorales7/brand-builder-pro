@@ -7,6 +7,7 @@ import Contact from '@/components/landing/Contact';
 import Footer from '@/components/landing/Footer';
 import { Skiper52 } from '@/components/landing/Skiper52';
 import Services from '@/components/landing/Services';
+import HomeChefIntro from '@/components/landing/HomeChefIntro';
 
 const Index = () => {
   return (
@@ -15,6 +16,7 @@ const Index = () => {
         <Header />
         <main>
           <Hero />
+          <HomeChefIntro />
           <About />
           
           {/* Gallery Section - Skiper52 */}
