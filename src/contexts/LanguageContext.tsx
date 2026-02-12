@@ -113,6 +113,26 @@ const translations: Record<Language, Record<string, string>> = {
     'homechefintro.fridgeAlt': 'Organized containers in fridge',
     'homechefintro.bottomText': 'Enjoy balanced, exclusive, and ready-to-heat meals served by a professional chef who adapts to your taste and lifestyle.',
     'homechefintro.logoAlt': 'HomeChef Logo',
+
+    // Booking/Calendar
+    'booking.title': 'Reserve Your Private Experience',
+    'booking.desc': 'Select a date and time for your exclusive culinary event. Reservations are confirmed instantly and dates are blocked in real time.',
+    'booking.days.0': 'Sun',
+    'booking.days.1': 'Mon',
+    'booking.days.2': 'Tue',
+    'booking.days.3': 'Wed',
+    'booking.days.4': 'Thu',
+    'booking.days.5': 'Fri',
+    'booking.days.6': 'Sat',
+    'booking.selected': 'Selected date',
+    'booking.name': 'Full Name',
+    'booking.email': 'Email',
+    'booking.phone': 'Phone',
+    'booking.confirm': 'Confirm Reservation',
+    'booking.back': 'Back',
+    'booking.success': 'Reservation confirmed! We look forward to serving you.',
+    'booking.errorRequired': 'All fields and a time slot are required.',
+    'booking.errorTaken': 'This time slot is already booked. Please choose another.',
   },
   es: {
     // Navigation
@@ -218,6 +238,26 @@ const translations: Record<Language, Record<string, string>> = {
     'homechefintro.fridgeAlt': 'Recipientes organizados en refrigerador',
     'homechefintro.bottomText': 'Disfruta de comidas balanceadas, exclusivas y listas para calentar servidas por un chef profesional que se adapta a tu gusto y ritmo de vida.',
     'homechefintro.logoAlt': 'Logo HomeChef',
+
+    // Booking/Calendar
+    'booking.title': 'Reserva tu experiencia privada',
+    'booking.desc': 'Selecciona fecha y horario para tu evento culinario exclusivo. Las reservas se confirman al instante y las fechas se bloquean en tiempo real.',
+    'booking.days.0': 'Dom',
+    'booking.days.1': 'Lun',
+    'booking.days.2': 'Mar',
+    'booking.days.3': 'Mié',
+    'booking.days.4': 'Jue',
+    'booking.days.5': 'Vie',
+    'booking.days.6': 'Sáb',
+    'booking.selected': 'Fecha seleccionada',
+    'booking.name': 'Nombre completo',
+    'booking.email': 'Correo electrónico',
+    'booking.phone': 'Teléfono',
+    'booking.confirm': 'Confirmar reserva',
+    'booking.back': 'Volver',
+    'booking.success': '¡Reserva confirmada! Será un placer atenderte.',
+    'booking.errorRequired': 'Todos los campos y un horario son obligatorios.',
+    'booking.errorTaken': 'Ese horario ya está reservado. Elige otro.',
   },
 };
 

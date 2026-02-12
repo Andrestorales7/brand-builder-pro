@@ -3,11 +3,12 @@ import Header from '@/components/landing/Header';
 import Hero from '@/components/landing/Hero';
 import About from '@/components/landing/About';
 import Experience from '@/components/landing/Experience';
-import Contact from '@/components/landing/Contact';
+import BookingCalendar from '@/components/landing/BookingCalendar';
 import Footer from '@/components/landing/Footer';
 import { Skiper52 } from '@/components/landing/Skiper52';
 import Services from '@/components/landing/Services';
 import HomeChefIntro from '@/components/landing/HomeChefIntro';
+import Contact from '@/components/landing/Contact';
 
 const Index = () => {
   return (
@@ -24,7 +25,6 @@ const Index = () => {
             <Skiper52 />
           </section>
           <Services />
-          
           <Contact />
         </main>
         <Footer />

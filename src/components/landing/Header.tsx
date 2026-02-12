@@ -45,9 +45,9 @@ const Header = () => {
       <div className="container-premium">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo / Name */}
-          <motion.a
-            href="#"
-            className="flex items-center text-lg md:text-xl font-light tracking-wider uppercase"
+          <motion.button
+            onClick={() => handleNavigation('/', 'navigate')}
+            className="flex items-center text-lg md:text-xl font-light tracking-wider uppercase bg-transparent border-none p-0 m-0 focus:outline-none"
             whileHover={{ opacity: 0.7 }}
             transition={{ duration: 0.2 }}
             aria-label={t('nav.inicio')}
