@@ -29,7 +29,7 @@ export default function HomeChefIntro() {
             ))}
           </ul>
           <div className="flex items-end gap-4 mt-auto">
-            <img src="/images/chef-cooking.jpg" alt={t('homechefintro.chefAlt')} className="w-40 h-40 object-cover rounded-xl shadow-lg border-4 border-white" style={{boxShadow:'0 10px 30px rgba(0,0,0,0.05)'}} />
+            <img src="/images/plate2.jpeg" alt={t('homechefintro.chefAlt')} className="w-40 h-40 object-cover rounded-xl shadow-lg border-4 border-white" style={{boxShadow:'0 10px 30px rgba(0,0,0,0.05)'}} />
           </div>
         </div>
         {/* Columna Derecha: Collage */}

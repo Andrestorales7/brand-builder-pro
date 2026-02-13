@@ -24,7 +24,7 @@ const About = () => {
           >
             <div className="relative aspect-[4/5] overflow-hidden">
               <motion.img
-                src="/images/pic.jpeg"
+                src="/images/pic1.jpeg"
                 alt="Chef David at work"
                 className="w-full h-full object-cover"
                 whileHover={{ scale: 1.05 }}
