@@ -113,6 +113,10 @@ const translations: Record<Language, Record<string, string>> = {
     'homechefintro.fridgeAlt': 'Organized containers in fridge',
     'homechefintro.bottomText': 'Enjoy balanced, exclusive, and ready-to-heat meals served by a professional chef who adapts to your taste and lifestyle.',
     'homechefintro.logoAlt': 'HomeChef Logo',
+    'homechefintro.scheduleTitle': 'Important: Schedule in Advance',
+    'homechefintro.scheduleNote': 'Please book your appointment at least 4 hours prior to your desired service time to ensure availability and proper preparation.',
+    'homechefintro.appointmentTitle': 'Book Your Chef Experience',
+    'homechefintro.appointmentSubtitle': 'Select your preferred date and time below',
 
     // Booking/Calendar
     'booking.title': 'Reserve Your Private Experience',
@@ -238,6 +242,10 @@ const translations: Record<Language, Record<string, string>> = {
     'homechefintro.fridgeAlt': 'Recipientes organizados en refrigerador',
     'homechefintro.bottomText': 'Disfruta de comidas balanceadas, exclusivas y listas para calentar servidas por un chef profesional que se adapta a tu gusto y ritmo de vida.',
     'homechefintro.logoAlt': 'Logo HomeChef',
+    'homechefintro.scheduleTitle': 'Importante: Reserva con Anticipación',
+    'homechefintro.scheduleNote': 'Por favor, reserva tu cita con al menos 4 horas de anticipación a la hora de servicio deseada para garantizar disponibilidad y preparación adecuada.',
+    'homechefintro.appointmentTitle': 'Reserva tu Experiencia con Chef',
+    'homechefintro.appointmentSubtitle': 'Selecciona tu fecha y hora preferida abajo',
 
     // Booking/Calendar
     'booking.title': 'Reserva tu experiencia privada',
