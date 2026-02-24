@@ -6,9 +6,9 @@
     "paths": {
       "@/*": ["./src/*"]
     },
+    "skipLibCheck": true,
     "noImplicitAny": false,
     "noUnusedParameters": false,
-    "skipLibCheck": true,
     "allowJs": true,
     "noUnusedLocals": false,
     "strictNullChecks": false
