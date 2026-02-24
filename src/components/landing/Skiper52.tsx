@@ -9,12 +9,12 @@ import { cn } from "@/lib/utils";
 const Skiper52 = () => {
   const images = [
     { src: "/images/2.jpeg", alt: "Chef David - Galería 1", code: "#1" },
-    { src: "/images/3.jpeg", alt: "Chef David - Galería 2", code: "#2" },
+    { src: "/images/plate4.jpeg", alt: "Chef David - Galería 2", code: "#2" },
     { src: "/images/4.jpeg", alt: "Chef David - Galería 3", code: "#3" },
-    { src: "/images/5.jpeg", alt: "Chef David - Galería 4", code: "#4" },
+    { src: "/images/plate.jpeg", alt: "Chef David - Galería 4", code: "#4" },
     { src: "/images/6.jpeg", alt: "Chef David - Galería 5", code: "#5" },
     { src: "/images/11.jpeg", alt: "Chef David - Galería 6", code: "#6" },
-    { src: "/images/12.jpeg", alt: "Chef David - Galería 7", code: "#7" },
+    { src: "/images/plate2.jpeg", alt: "Chef David - Galería 7", code: "#7" },
     { src: "/images/9.jpeg", alt: "Chef David - Galería 8", code: "#8" },
     { src: "/images/10.jpeg", alt: "Chef David - Galería 9", code: "#9" },
     { src: "/images/13.jpeg", alt: "Chef David - Galería 10", code: "#10" },
@@ -34,7 +34,7 @@ const HoverExpand_001 = ({ images, className, }: { images: { src: string; alt: s
       initial={{ opacity: 0, translateY: 20 }}
       animate={{ opacity: 1, translateY: 0 }}
       transition={{ duration: 0.3, delay: 0.5 }}
-      className={cn("relative w-full max-w-6xl px-5", className)}
+      className={cn("relative w-full max-w-6xl px-2 sm:px-5", className)}
     >
       <motion.div
         initial={{ opacity: 0 }}
@@ -42,13 +42,20 @@ const HoverExpand_001 = ({ images, className, }: { images: { src: string; alt: s
         transition={{ duration: 0.3 }}
         className="w-full"
       >
-        <div className="flex w-full items-center justify-center gap-1">
+        {/* Mobile: horizontal scroll, Desktop: flex row */}
+        <div className="flex w-full items-center justify-center gap-1 overflow-x-auto scrollbar-hide sm:scrollbar-default sm:overflow-x-visible py-2 sm:py-0">
           {images.map((image, index) => (
             <motion.div
               key={index}
-              className="relative cursor-pointer overflow-hidden rounded-3xl"
-              initial={{ width: "2.5rem", height: "20rem" }}
-              animate={{ width: activeImage === index ? "24rem" : "5rem", height: activeImage === index ? "24rem" : "24rem" }}
+              className={cn(
+                "relative cursor-pointer overflow-hidden rounded-2xl sm:rounded-3xl flex-shrink-0 transition-all duration-300",
+                // Mobile: smaller, Desktop: original
+                activeImage === index
+                  ? "w-[70vw] h-[60vw] max-w-xs max-h-80 sm:w-[24rem] sm:h-[24rem]"
+                  : "w-[18vw] h-[60vw] max-w-[60px] max-h-80 sm:w-[5rem] sm:h-[24rem]"
+              )}
+              initial={false}
+              animate={{}}
               transition={{ duration: 0.3, ease: "easeInOut" }}
               onClick={() => setActiveImage(index)}
               onHoverStart={() => setActiveImage(index)}
@@ -69,13 +76,13 @@ const HoverExpand_001 = ({ images, className, }: { images: { src: string; alt: s
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
-                    className="absolute flex h-full w-full flex-col items-end justify-end p-4"
+                    className="absolute flex h-full w-full flex-col items-end justify-end p-2 sm:p-4"
                   >
-                    <p className="text-left text-xs text-white/50">{image.code}</p>
+                    <p className="text-left text-xs text-white/70 drop-shadow-sm">{image.code}</p>
                   </motion.div>
                 )}
               </AnimatePresence>
-              <img src={image.src} className="size-full object-cover" alt={image.alt} />
+              <img src={image.src} className="size-full object-cover select-none" alt={image.alt} draggable={false} />
             </motion.div>
           ))}
         </div>
