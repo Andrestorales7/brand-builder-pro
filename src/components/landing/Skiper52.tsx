@@ -1,9 +1,10 @@
+import { useLanguage } from '@/contexts/LanguageContext';
+import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-import React from 'react';
 
 const images = [
   { src: "/images/2.jpeg", alt: "Chef David - Galería 1", code: "#1" },
@@ -19,10 +20,11 @@ const images = [
 ];
 
 const Skiper52 = () => {
+  const { t } = useLanguage();
   return (
     <div className="w-full flex flex-col items-center justify-center bg-[#f5f4f3] py-8">
       <h2 className="text-2xl md:text-3xl font-serif font-light text-[#2E2E2E] mb-8 text-center">
-        Conoce nuestros mejores platos
+        {t('gallery.intro')}
       </h2>
       <Swiper
         modules={[Autoplay, Pagination, Navigation]}

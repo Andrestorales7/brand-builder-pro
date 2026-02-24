@@ -19,7 +19,7 @@ const Index = () => {
           <About />
           {/* HomeChefIntro debajo de About */}
           <HomeChefIntro />
-          
+          {/* <BookingCalendar /> eliminado a pedido del usuario */}
           {/* Gallery Section - Skiper52 */}
           <section id="gallery" className="w-full bg-[#f5f4f3]">
             <Skiper52 />

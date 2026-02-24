@@ -97,6 +97,9 @@ const translations: Record<Language, Record<string, string>> = {
     'contact.form.email': 'Email Address',
     'contact.form.message': 'Tell me about your event or needs',
     'contact.form.submit': 'Send Message',
+    'contact.whatsappTitle': 'Send a direct message via WhatsApp',
+    'contact.whatsappPlaceholder': 'Write your message for the chef...',
+    'contact.whatsappButton': 'Send via WhatsApp',
     
     // Footer
     'footer.copyright': '© 2025 David Sanchez Amarilla. All rights reserved.',
@@ -137,6 +140,7 @@ const translations: Record<Language, Record<string, string>> = {
     'booking.success': 'Reservation confirmed! We look forward to serving you.',
     'booking.errorRequired': 'All fields and a time slot are required.',
     'booking.errorTaken': 'This time slot is already booked. Please choose another.',
+    'gallery.intro': 'Discover our best dishes',
   },
   es: {
     // Navigation
@@ -226,6 +230,9 @@ const translations: Record<Language, Record<string, string>> = {
     'contact.form.email': 'Correo Electrónico',
     'contact.form.message': 'Cuéntame sobre tu evento o necesidades',
     'contact.form.submit': 'Enviar Mensaje',
+    'contact.whatsappTitle': 'Enviar mensaje directo por WhatsApp',
+    'contact.whatsappPlaceholder': 'Escribe tu mensaje para el chef...',
+    'contact.whatsappButton': 'Enviar por WhatsApp',
     
     // Footer
     'footer.copyright': '© 2025 David Sanchez Amarilla. Todos los derechos reservados.',
@@ -266,6 +273,7 @@ const translations: Record<Language, Record<string, string>> = {
     'booking.success': '¡Reserva confirmada! Será un placer atenderte.',
     'booking.errorRequired': 'Todos los campos y un horario son obligatorios.',
     'booking.errorTaken': 'Ese horario ya está reservado. Elige otro.',
+    'gallery.intro': 'Conoce nuestros mejores platos',
   },
 };
 

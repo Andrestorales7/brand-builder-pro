@@ -1,38 +1,18 @@
 import { motion, useInView } from 'framer-motion';
 import { useLanguage } from '@/contexts/LanguageContext';
-import { useRef, useState } from 'react';
+import { useRef } from 'react';
 import { MapPin, Phone, Mail, ArrowRight } from 'lucide-react';
 
 const Contact = () => {
   const { t } = useLanguage();
   const sectionRef = useRef<HTMLElement>(null);
   const isInView = useInView(sectionRef, { once: true, margin: '-100px' });
-  const [formState, setFormState] = useState({
-    name: '',
-    email: '',
-    message: '',
-  });
-
-  const handleInputChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    setFormState({
-      ...formState,
-      [e.target.name]: e.target.value,
-    });
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Visual only - no actual submission
-    console.log('Form submitted (visual only):', formState);
-  };
 
   return (
     <section
       id="contact"
       ref={sectionRef}
-      className="section-padding bg-foreground text-background"
+      className="section-padding bg-[#F5F1EC] text-black"
     >
       <div className="container-premium">
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-24">
@@ -86,20 +66,12 @@ const Contact = () => {
                 className="flex items-center gap-4"
               >
                 <Phone size={20} className="text-background/60" />
-                <div className="flex flex-col">
-                  <a
-                    href="tel:+14353287426"
-                    className="text-lg hover:text-background/80 transition-colors"
-                  >
-                    +1 435 328 7426
-                  </a>
-                  <a
-                    href="tel:435-327-8939"
-                    className="text-base text-background/60 hover:text-background/80 transition-colors"
-                  >
-                    435-327-8939
-                  </a>
-                </div>
+                <a
+                  href="tel:+14353287426"
+                  className="text-lg hover:text-background/80 transition-colors"
+                >
+                  +1 435 328 7426
+                </a>
               </motion.div>
 
               <motion.div
@@ -143,89 +115,75 @@ const Contact = () => {
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 1, delay: 0.2, ease: 'easeOut' }}
           >
-            <form onSubmit={handleSubmit} className="space-y-8">
-              {/* Name Input */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={isInView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.6, delay: 0.4 }}
+            {/* WhatsApp Message Section ÚNICO (mezcla de formulario y WhatsApp) */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.6, delay: 0.8 }}
+              className="mt-12 bg-background/90 rounded-2xl p-8 shadow-lg border border-background/20"
+            >
+              <h3 className="text-xl md:text-2xl font-serif font-semibold mb-4 text-black">
+                {t('contact.whatsappTitle')}
+              </h3>
+              <form
+                onSubmit={e => {
+                  e.preventDefault();
+                  const form = e.currentTarget as HTMLFormElement;
+                  const name = (form.querySelector('[name="name"]') as HTMLInputElement)?.value || '';
+                  const email = (form.querySelector('[name="email"]') as HTMLInputElement)?.value || '';
+                  const message = (form.querySelector('[name="message"]') as HTMLTextAreaElement)?.value || '';
+                  let msg = '';
+                  if (name) msg += `${t('contact.form.name')}: ${name}\n`;
+                  if (email) msg += `${t('contact.form.email')}: ${email}\n`;
+                  msg += `${t('contact.form.message')}: ${message}`;
+                  const phone = '+14353287426';
+                  const url = `https://wa.me/${phone.replace(/[^\d]/g, '')}?text=${encodeURIComponent(msg)}`;
+                  window.open(url, '_blank');
+                }}
+                className="flex flex-col gap-4"
               >
-                <label
-                  htmlFor="name"
-                  className="block text-xs tracking-[0.2em] uppercase text-background/60 mb-3"
-                >
+                <label htmlFor="name" className="block text-xs tracking-[0.2em] uppercase text-black mb-3">
                   {t('contact.form.name')}
                 </label>
                 <input
                   type="text"
                   id="name"
                   name="name"
-                  value={formState.name}
-                  onChange={handleInputChange}
-                  className="w-full bg-transparent border-b border-background/30 pb-3 text-lg focus:border-background outline-none transition-colors placeholder:text-background/30"
+                  className="w-full bg-transparent border-b border-black pb-3 text-lg text-black focus:border-black outline-none transition-colors placeholder:text-black/40"
                   placeholder="John Doe"
+                  required
                 />
-              </motion.div>
-
-              {/* Email Input */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={isInView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.6, delay: 0.5 }}
-              >
-                <label
-                  htmlFor="email"
-                  className="block text-xs tracking-[0.2em] uppercase text-background/60 mb-3"
-                >
+                <label htmlFor="email" className="block text-xs tracking-[0.2em] uppercase text-black mb-3">
                   {t('contact.form.email')}
                 </label>
                 <input
                   type="email"
                   id="email"
                   name="email"
-                  value={formState.email}
-                  onChange={handleInputChange}
-                  className="w-full bg-transparent border-b border-background/30 pb-3 text-lg focus:border-background outline-none transition-colors placeholder:text-background/30"
+                  className="w-full bg-transparent border-b border-black pb-3 text-lg text-black focus:border-black outline-none transition-colors placeholder:text-black/40"
                   placeholder="john@example.com"
+                  required
                 />
-              </motion.div>
-
-              {/* Message Input */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={isInView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.6, delay: 0.6 }}
-              >
-                <label
-                  htmlFor="message"
-                  className="block text-xs tracking-[0.2em] uppercase text-background/60 mb-3"
-                >
+                <label htmlFor="message" className="block text-xs tracking-[0.2em] uppercase text-black mb-3">
                   {t('contact.form.message')}
                 </label>
                 <textarea
                   id="message"
                   name="message"
-                  value={formState.message}
-                  onChange={handleInputChange}
                   rows={4}
-                  className="w-full bg-transparent border-b border-background/30 pb-3 text-lg focus:border-background outline-none transition-colors resize-none placeholder:text-background/30"
-                  placeholder="I'm planning a private dinner for 8 guests..."
+                  className="w-full bg-transparent border-b border-black pb-3 text-lg text-black focus:border-black outline-none transition-colors resize-none placeholder:text-black/40"
+                  placeholder={t('contact.whatsappPlaceholder')}
+                  required
                 />
-              </motion.div>
-
-              {/* Submit Button */}
-              <motion.button
-                type="submit"
-                initial={{ opacity: 0, y: 20 }}
-                animate={isInView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.6, delay: 0.7 }}
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-                className="w-full bg-background text-foreground py-4 text-sm tracking-wider uppercase transition-all duration-500 hover:bg-background/90"
-              >
-                {t('contact.form.submit')}
-              </motion.button>
-            </form>
+                <button
+                  type="submit"
+                  className="w-full bg-black text-white font-semibold py-4 rounded-lg text-lg flex items-center justify-center gap-2 hover:bg-neutral-900 transition-all mt-4"
+                >
+                  <svg width="24" height="24" fill="none" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.868-2.03-.967-.273-.099-.471-.148-.669.15-.198.297-.767.967-.94 1.164-.173.198-.347.223-.644.074-.297-.149-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.149-.173.198-.297.297-.495.099-.198.05-.372-.025-.521-.074-.149-.669-1.611-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.372-.01-.571-.01-.198 0-.521.074-.793.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.099 3.209 5.077 4.504.711.306 1.264.489 1.698.626.713.227 1.36.195 1.872.118.571-.085 1.758-.719 2.007-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.569-.347z" fill="currentColor"/></svg>
+                  {t('contact.whatsappButton')}
+                </button>
+              </form>
+            </motion.div>
           </motion.div>
         </div>
       </div>

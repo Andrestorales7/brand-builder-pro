@@ -20,7 +20,7 @@ const Header = () => {
     { key: 'nav.about', href: '#about', type: 'scroll' },
     { key: 'nav.services', href: '#services', type: 'scroll' },
     { key: 'nav.skills', href: '/SkillsPage', type: 'navigate' },
-    { key: 'nav.contact', href: '#contact', type: 'scroll' },
+    { key: 'nav.contact', href: '/Contact', type: 'navigate' },
   ];
 
   const handleNavigation = (href: string, type: 'scroll' | 'navigate') => {
