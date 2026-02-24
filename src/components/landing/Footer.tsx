@@ -5,36 +5,17 @@ const Footer = () => {
   const { t } = useLanguage();
 
   return (
-    <footer className="py-12 bg-background border-t border-border">
-      <div className="container-premium">
-        <div className="flex flex-col md:flex-row justify-between items-center gap-6">
-          {/* Brand */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="text-center md:text-left"
-          >
-            <p className="text-lg font-light tracking-wider uppercase mb-1">
-              David Sanchez Amarilla
-            </p>
-            <p className="text-xs text-muted-foreground tracking-widest uppercase">
-              {t('footer.tagline')}
-            </p>
-          </motion.div>
-
-          {/* Copyright */}
-          <motion.p
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-xs text-muted-foreground tracking-wide"
-          >
-            {t('footer.copyright')}
-          </motion.p>
-        </div>
+    <footer className="relative py-0 bg-background border-t border-border overflow-hidden">
+      {/* Imagen de fondo o principal del footer */}
+      <div className="w-full h-[400px] md:h-[600px] relative">
+        <img
+          src="/images/footer.jpeg"
+          alt="Footer background"
+          className="w-full h-full object-cover object-center select-none pointer-events-none"
+          draggable={false}
+          style={{ filter: 'brightness(0.85)' }}
+        />
+        {/* Solo la imagen, sin textos superpuestos */}
       </div>
     </footer>
   );

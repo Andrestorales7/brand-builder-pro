@@ -8,7 +8,6 @@ import Footer from '@/components/landing/Footer';
 import { Skiper52 } from '@/components/landing/Skiper52';
 import Services from '@/components/landing/Services';
 import HomeChefIntro from '@/components/landing/HomeChefIntro';
-import Contact from '@/components/landing/Contact';
 
 const Index = () => {
   return (
@@ -17,15 +16,16 @@ const Index = () => {
         <Header />
         <main>
           <Hero />
-          <HomeChefIntro />
           <About />
+          {/* HomeChefIntro debajo de About */}
+          <HomeChefIntro />
           
           {/* Gallery Section - Skiper52 */}
           <section id="gallery" className="w-full bg-[#f5f4f3]">
             <Skiper52 />
           </section>
           <Services />
-          <Contact />
+          {/* <Contact /> eliminado para que solo esté en su propia vista */}
         </main>
         <Footer />
       </div>
