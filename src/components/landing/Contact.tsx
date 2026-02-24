@@ -86,12 +86,20 @@ const Contact = () => {
                 className="flex items-center gap-4"
               >
                 <Phone size={20} className="text-background/60" />
-                <a
-                  href="tel:435-327-8939"
-                  className="text-lg hover:text-background/80 transition-colors"
-                >
-                  435-327-8939
-                </a>
+                <div className="flex flex-col">
+                  <a
+                    href="tel:+14353287426"
+                    className="text-lg hover:text-background/80 transition-colors"
+                  >
+                    +1 435 328 7426
+                  </a>
+                  <a
+                    href="tel:435-327-8939"
+                    className="text-base text-background/60 hover:text-background/80 transition-colors"
+                  >
+                    435-327-8939
+                  </a>
+                </div>
               </motion.div>
 
               <motion.div
