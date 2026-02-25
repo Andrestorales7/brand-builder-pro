@@ -1,0 +1,143 @@
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "@id": "https://homechefweekly.com",
+  "name": "HomeChefWeekly",
+  "alternateName": "Home Chef Weekly",
+  "description": "Luxury in-home private chef services in Heber City, Utah. We provide personalized weekly meal preparation, seasonal custom menus, and high-end event catering for affluent homeowners seeking restaurant-quality dining at home.",
+  "image": "https://homechefweekly.com/images/homechefweekly-logo.png",
+  "url": "https://homechefweekly.com",
+  "telephone": "+1-435-XXX-XXXX",
+  "email": "info@homechefweekly.com",
+  "priceRange": "$$$",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "E Barnwood Ln",
+    "addressLocality": "Heber City",
+    "addressRegion": "UT",
+    "postalCode": "84032",
+    "addressCountry": "US"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 40.5086,
+    "longitude": -111.4129
+  },
+  "areaServed": [
+    {
+      "@type": "City",
+      "name": "Heber City",
+      "addressRegion": "UT",
+      "addressCountry": "US"
+    },
+    {
+      "@type": "City",
+      "name": "Park City",
+      "addressRegion": "UT",
+      "addressCountry": "US"
+    },
+    {
+      "@type": "City",
+      "name": "Midway",
+      "addressRegion": "UT",
+      "addressCountry": "US"
+    },
+    {
+      "@type": "City",
+      "name": "Kamas",
+      "addressRegion": "UT",
+      "addressCountry": "US"
+    }
+  ],
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "09:00",
+      "closes": "18:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Saturday", "Sunday"],
+      "opens": "10:00",
+      "closes": "16:00"
+    }
+  ],
+  "sameAs": [
+    "https://www.instagram.com/homechefweekly",
+    "https://www.facebook.com/homechefweekly",
+    "https://www.linkedin.com/company/homechefweekly"
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Private Chef Services",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "name": "Weekly Personal Chef Service",
+        "description": "Customized weekly meal planning and preparation delivered to your home in Heber City",
+        "availability": "https://schema.org/InStock",
+        "priceSpecification": {
+          "@type": "UnitPriceSpecification",
+          "priceCurrency": "USD",
+          "price": "Request Quote"
+        }
+      },
+      {
+        "@type": "Offer",
+        "name": "Seasonal Custom Menus",
+        "description": "Luxury seasonal dining experiences tailored to your preferences and dietary needs",
+        "availability": "https://schema.org/InStock",
+        "priceSpecification": {
+          "@type": "UnitPriceSpecification",
+          "priceCurrency": "USD",
+          "price": "Request Quote"
+        }
+      },
+      {
+        "@type": "Offer",
+        "name": "Private Event Catering",
+        "description": "High-end in-home event catering for intimate gatherings and celebrations in the Heber City area",
+        "availability": "https://schema.org/InStock",
+        "priceSpecification": {
+          "@type": "UnitPriceSpecification",
+          "priceCurrency": "USD",
+          "price": "Request Quote"
+        }
+      },
+      {
+        "@type": "Offer",
+        "name": "Corporate Catering",
+        "description": "Executive catering services for private business events and retreats",
+        "availability": "https://schema.org/InStock",
+        "priceSpecification": {
+          "@type": "UnitPriceSpecification",
+          "priceCurrency": "USD",
+          "price": "Request Quote"
+        }
+      }
+    ]
+  },
+  "knowsAbout": [
+    "Private Chef Services",
+    "Personal Chef",
+    "In-Home Dining",
+    "Meal Preparation",
+    "Event Catering",
+    "Luxury Dining",
+    "Custom Menus"
+  ],
+  "potentialAction": {
+    "@type": "ReserveAction",
+    "target": {
+      "@type": "EntryPoint",
+      "urlTemplate": "https://homechefweekly.com/booking",
+      "actionPlatform": ["http://schema.org/DesktopWebPlatform", "http://schema.org/MobileWebPlatform"]
+    }
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5",
+    "ratingCount": "1"
+  }
+}
