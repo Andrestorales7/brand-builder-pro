@@ -52,7 +52,7 @@ export const FlipText = ({ phrases, interval = 2000, className = '', ariaLabel }
             pointerEvents: i === index ? 'auto' : 'none',
             transition: reduceMotion
               ? 'none'
-              : 'opacity 0.7s cubic-bezier(0.4,0,0.2,1), transform 0.7s cubic-bezier(0.4,0,0.2,1)',
+              : 'opacity 1.2s cubic-bezier(0.4,0,0.2,1), transform 1.2s cubic-bezier(0.4,0,0.2,1)',
             transform:
               i === index
                 ? 'none'

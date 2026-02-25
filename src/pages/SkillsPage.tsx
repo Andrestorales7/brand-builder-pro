@@ -3,7 +3,7 @@ import Header from '@/components/landing/Header';
 import Footer from '@/components/landing/Footer';
 import { motion, useInView, useScroll, useTransform } from 'framer-motion';
 import { useLanguage } from '@/contexts/LanguageContext';
-import { useRef } from 'react';
+import { useRef, useEffect } from 'react';
 import {
   Flame,
   Utensils,
@@ -171,6 +171,9 @@ const SkillsContent = () => {
 };
 
 const SkillsPage = () => {
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+  }, []);
   return (
     <LanguageProvider>
       <div className="min-h-screen bg-background text-foreground overflow-x-hidden">

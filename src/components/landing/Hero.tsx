@@ -106,7 +106,7 @@ const Hero = () => {
             <span style={{ whiteSpace: 'pre' }}>{staticStart} </span>
             <FlipText
               phrases={flipPhrases}
-              interval={2000}
+              interval={3500}
               className="hero-flip-text"
               ariaLabel={flipPhrases.join(', ')}
             />
@@ -130,13 +130,13 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 1 }}
           >
             <motion.a
-              href="#contact"
+              href="#homechef-intro"
               className="group inline-flex items-center gap-4 bg-foreground text-background px-8 py-4 text-sm tracking-wider uppercase transition-all duration-500 hover:bg-foreground/90"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
               onClick={(e) => {
                 e.preventDefault();
-                document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' });
+                document.querySelector('#homechef-intro')?.scrollIntoView({ behavior: 'smooth' });
               }}
             >
               <span>{t('hero.cta')}</span>
