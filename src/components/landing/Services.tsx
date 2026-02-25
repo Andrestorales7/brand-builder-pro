@@ -109,18 +109,7 @@ const Services = () => {
           </ul>
         </div>
 
-        {/* Experiencia personal chef, destacado editorial */}
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          className="bg-[#fff9f2] rounded-3xl shadow-md px-8 py-12 max-w-3xl mx-auto text-center border border-[#e9e6e2]"
-        >
-          <h4 className="font-serif text-2xl md:text-3xl text-[#2E2E2E] mb-4 font-light">{t('services.personal_chef.title')}</h4>
-          <p className="text-[#5A5A5A] text-lg font-serif leading-relaxed">
-            {t('services.personal_chef.content')}
-          </p>
-        </motion.div>
+        
       </div>
     </section>
   );

@@ -32,9 +32,7 @@ export default function HomeChefIntro() {
         {/* Columna Izquierda: Texto */}
         <div className="flex flex-col gap-10 md:gap-12 relative">
           {/* Floating badge for mobile */}
-          <span className="absolute -top-8 left-0 md:static bg-[#C6A85C] text-white font-serif px-4 py-2 rounded-full shadow-lg text-xs md:text-base tracking-widest z-20">
-            {t('homechefintro.badge')}
-          </span>
+          
           <h2 className="font-serif text-4xl md:text-5xl font-light text-[#2E2E2E] leading-tight tracking-wide mb-4 relative z-10" style={{fontFamily: 'Playfair Display, Cormorant Garamond, Libre Baskerville, serif'}}>
             {t('homechefintro.title')}
           </h2>
@@ -76,7 +74,7 @@ export default function HomeChefIntro() {
             <div className="w-full flex justify-center">
               <div
                 className="calendly-inline-widget"
-                data-url="https://calendly.com/infohomechefutah/4hr?hide_event_type_details=1&hide_gdpr_banner=1&background_color=f3eeea&primary_color=5f657e"
+                data-url="https://calendly.com/infohomechefutah/infohomechefutah?background_color=f5f0eb&primary_color=97938c"
                 style={{ width: '100%', maxWidth: '560px', minWidth: '320px', height: '700px' }}
               />
             </div>
