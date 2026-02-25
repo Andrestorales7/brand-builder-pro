@@ -3,6 +3,8 @@ import react from "@vitejs/plugin-react-swc";
 import path from "path";
 import { visualizer } from "rollup-plugin-visualizer";
 
+import { cloudflare } from "@cloudflare/vite-plugin";
+
 // https://vitejs.dev/config/
 export default defineConfig({
   server: {
@@ -12,7 +14,7 @@ export default defineConfig({
       overlay: false,
     },
   },
-  plugins: [react(), visualizer({ open: false })],
+  plugins: [react(), visualizer({ open: false }), cloudflare()],
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
